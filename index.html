@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+  <style>
+    /* html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  } */
+</style>
+
+  <title>Nicola Evans | Fine Art</title>
+</head>
+
+<body>
+  <header id="headerSection" class="header">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand navbar__brand" href="#headerSection">Nicola Evans | Fine Art</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item navbar__item">
+            <a class="nav-link nav-link-scroll navbar__link" href="#aboutSection">About</a>
+          </li>
+          <li class="nav-item navbar__item">
+            <a class="nav-link nav-link-scroll navbar__link" href="#gallerySection">Gallery</a>
+          </li>
+          <li class="nav-item navbar__item">
+            <a class="nav-link nav-link-scroll navbar__link" href="#exhibSection">Exhibitions</a>
+          </li>
+          <li class="nav-item navbar__item">
+            <a class="nav-link nav-link-scroll navbar__link" href="#contactSection">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="header__text-box">
+      <h1 class="header-primary">
+        <div class="header__animate--1">
+          <span class="header-primary--main">Nicola Evans</span>
+        </div>
+        <div class="header__animate--2">
+          <span class="header-primary--sub">Fine Art</span>
+        </div>
+      </h1>
+    </div>
+    <div class="header__text-social">
+      <a href="#" class="social-link">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="#" class="social-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="social-link">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section id="aboutSection" class="section-about">
+      <div class="row">
+        <div class="col-12 col-sm-3 col-md-4 slide-up">
+          <div class="section-about__profile">
+            <img src="img/profile-img.jpg" alt="Nicola Evans Profile" class="section-about__profile--img">
+          </div>
+        </div>
+        <div class="col-12 col-sm-9 col-md-8 slide-up">
+          <h2 class="header-secondary text-left"><span class="underline">About Me</span></h2>
+          <p class="section-about__description">Since graduating from Brighton University with a degree in Fine Art Painting I have exhibited in and around Brighton, Buckinghamshire, London and the South West.</p>
+          <p class="section-about__description">Using light, I aspire to create a sense of space, where boundaries between reality and fantasy become blurred.</p>
+          <p class="section-about__description">For more information about my work or to discuss a commissioned piece please contact me <a href="#">here</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="gallerySection" class="section-gallery">
+          <h2 class="header-secondary mb-3">Gallery</h2>
+          <h4 class="gallery__sub text-center mb-5">Exhibitions | Comissions</h4>
+          <div class="section-gallery__gallery"></div>
+        </section> -->
+
+
+    <!-- <section id="gallerySection" class="gallery">
+      <h2 class="header-secondary"><span class="underline">Gallery</span></h2>
+      <div class="gallery__container">
+        <div class="row">
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Animals</h3>
+            <div id="animals" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Commissions</h3>
+            <div id="commissions" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Landscapes</h3>
+            <div id="landscapes" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Norfolk Landscapes</h3>
+            <div id="norfolklandscapes" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Pet Portraits</h3>
+            <div id="petportraits" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Portraits</h3>
+            <div id="portraits" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Pre Raphaelites</h3>
+            <div id="preraphaelites" class="gallery__grid"></div>
+          </div>
+          <div class="col-12 col-md-4 h-100">
+            <h3 class="header-tertiary text-center">Women</h3>
+            <div id="women" class="gallery__grid"></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="gallerySection" class="gallery">
+      <h2 class="header-secondary mb-3">Gallery</h2>
+      <div class="gallery__categories">
+        <div class="gallery_category" onClick="showGallery('animals');">
+          <p class="gallery__category--text">animals</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('commissions');">
+          <p class="gallery__category--text">commissions</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('landscapes');">
+          <p class="gallery__category--text">landscapes</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('norfolklandscapes');">
+          <p class="gallery__category--text">norfolk landscapes</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('petportraits');">
+          <p class="gallery__category--text">pet portraits</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('portraits');">
+          <p class="gallery__category--text">portraits</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('preraphaelites');">
+          <p class="gallery__category--text">pre raphaelites</p>
+        </div>
+        <div class="gallery_category" onClick="showGallery('women');">
+          <p class="gallery__category--text">women</p>
+        </div>
+      </div>
+      <!-- <div class="section-gallery__gallery"></div> -->
+      <div id="galleryWrapper" class="gallery__container">
+      </div>
+    </section>
+
+    <section id="exhibSection" class="section-slider">
+      <div class="slider-container">
+        <h2 class="header-secondary"><span class="underline">Exhibitions</span></h2>
+        <div class="timeline">
+          <div class="swiper-container">
+            <!-- <div id="ownContent" class="swiper-wrapper">
+
+                </div> -->
+            <div class="swiper-wrapper">
+              <!-- content dynaically generated -->
+            </div> <!-- Swiper wrapper end -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="contactSection" class="contact">
+      <h2 class="header-secondary"><span class="underline">Contact</span></h2>
+      <p class="contact__text">If ​you are interested in purchasing or commissioning a piece of my work then please get in touch.</p>
+      <div class="contact__type">
+        <h4 class="heading-quad">Email</h4>
+        <a href="mailto:nicola.k.evans@hotmail.com" class="contact__type--method"><span class="underline">nicola.k.evans@hotmail.com</span></a>
+      </div>
+      <div class="contact__type">
+        <h4 class="heading-quad">Phone</h4>
+        <a href="tel:07729223424" class="contact__type--method"><span class="underline">07729 223 424</span></a>
+      </div>
+      <div class="contact__type">
+        <h4 class="heading-quad">Social</h4>
+        <a href="#" class="contact__type--link">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="contact__type--link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="contact__type--link">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; <span id="year"></span> Nicola Evans Fine Art </p>
+  </footer>
+
+
+
+  <!-- BOOTSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  <!-- Bootstrap  -->
+
+  <!-- LIGHTBOX -->
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+  <!-- LIGHTBOX -->
+
+  <!-- Swiper -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+  <!-- Swiper -->
+
+  <!-- Scroll -->
+  <script src="js/scripts.js"></script>
+  <!-- scroll -->
+  <script src="js/jquery.visible.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+
+</body>
