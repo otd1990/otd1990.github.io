@@ -159,7 +159,7 @@ a:hover {
   filter: grayscale(1);
   margin-top: 8rem; }
   .hero__image {
-    background-image: url("../images/class-1.JPG");
+    background-image: url("../images/class-1.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
