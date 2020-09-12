@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>First Dance Thame</title>
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap  -->
+  <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.compiled.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="index.html">
+        <img src="images/logo-main.jpg" alt="First Dance Thame Logo" class="header__logo--img" />
+      </a>
+    </div>
+    <nav class="header__nav">
+      <div class="header__right">
+        <a href="about.html" class="header__nav--item">About</a>
+        <a href="classes.html" class="header__nav--item">Classes</a>
+        <a href="timetable.html" class="header__nav--item">Timetable</a>
+        <a href="contact.html" class="header__nav--item">Contact</a>
+      </div>
+    </nav>
+    <div class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </div>
+  </header>
+  <main>
+    <section class="pageAbout">
+      <div class="box__grey">
+        <div class="container">
+          <h1 class="box__grey--title">Timetable</h1>
+        </div>
+      </div>
+    </section>
+    <section class="timetable">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="timetable__text">Below are the classes I currently offer, If you are interested in a class that is not timetabled please do get in touch by filling out the contact form on the <a href="contact.html">contact page</a>. 1-2-1 tuition is also included.</p>
+          </div>
+          <div class="timetable__table col-12">
+            <div class="row timetable__header d-none d-md-flex">
+              <div class="col-4 timetable__header--item">WEDNESDAY</div>
+              <div class="col-4 timetable__header--item">FRIDAY</div>
+              <div class="col-4 timetable__header--item">SATURDAY</div>
+            </div>
+            <div class="row timetable__data">
+              <div class="col-12 col-md-4 timetable__data__item">
+                <span class="timetable__header__sm d-block d-md-none">Wednesday: </span><p><strong>4-4.30pm: </strong>I.S.T.D Pre Primary Ballet</p>
+              </div>
+              <div class="col-12 col-md-4 timetable__data__item">
+                <span class="timetable__header__sm d-block d-md-none">Friday: </span>
+                <p><strong>10-10.30am:</strong> Toddler Dance</p>
+                <p><strong>10.45-11.15am:</strong> Toddler Dance</p>
+              </div>
+              <div class="col-12 col-md-4 timetable__data__item">
+                <span class="timetable__header__sm d-block d-md-none">Saturday: </span>
+                <p><strong>9-9.30am:</strong> I.S.T.D Pre Primary Ballet</p>
+                <p><strong>9.45am-10.15am:</strong> I.S.T.D Primary Ballet</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; First Dance <span id="currYear"></span></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+  <script>
+    const currYear = new Date().getFullYear();
+
+    document.getElementById('currYear').innerHTML = currYear;
+  </script>
+</body>

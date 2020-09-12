@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>First Dance Thame</title>
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap  -->
+  <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.compiled.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <a href="index.html">
+        <img src="images/logo-main.jpg" alt="First Dance Thame Logo" class="header__logo--img" />
+      </a>
+    </div>
+    <nav class="header__nav">
+      <div class="header__right">
+        <a href="about.html" class="header__nav--item">About</a>
+        <a href="classes.html" class="header__nav--item">Classes</a>
+        <a href="timetable.html" class="header__nav--item">Timetable</a>
+        <a href="contact.html" class="header__nav--item">Contact</a>
+      </div>
+    </nav>
+    <div class="navigation__button">
+      <span class="navigation__icon">&nbsp;</span>
+    </div>
+  </header>
+  <main>
+    <section class="connectTop">
+      <div class="box__grey">
+        <div class="container">
+          <h1 class="box__grey--title">Contact</h1>
+        </div>
+      </div>
+    </section>
+    <section class="connect">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="connect__text">
+            <p>For more information contact Emily using the details below or contact form</p>
+          </div>
+          <div class="col-12 col-md-10">
+            <div class="connect__form--box">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="connect__form--info">
+                    <p class="connect__heading">Email</p>
+                    <p class="connect__item"><a href="mailto:firstdancethame@gmail.com">firstdancethame@gmail.com</a></p>
+                    <p class="connect__heading">Phone</p>
+                    <p class="connect__item"><a href="tel:07860685789">07860685789</a></p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-8">
+                  <form id="my-form" action="https://formspree.io/mlepqnqr" method="POST">
+                    <p id="my-form-status"></p>
+                    <div class="form-group row">
+                      <div class="col-12 col-md-6">
+                        <div class="connect__form--floating-container">
+                          <span class="connect__form--blocking">
+                            <input type="text" name="name" class="connect__form--text" />
+                            <span class="connect__form--floating-label">Name</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <div class="connect__form--floating-container">
+                          <span class="connect__form--blocking">
+                            <input type="text" name="email" class="connect__form--text" />
+                            <span class="connect__form--floating-label">Email</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <label class="connect__form--label">
+                          <textarea name="message" id="message" class="connect__form--text" cols="10" rows="5" placeholder="Your Message"></textarea>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end">
+                      <button id="my-form-button" class="button button__primary">Submit</button>
+
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <div class="connect__form--box">
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-4  d-flex align-items-center justify-content-center flex-column">
+                  <p class="connect__heading">Address</p>
+                  <p class="connect__item address">The Old school House</p>
+                  <p class="connect__item address">Long Crendon</p>
+                  <p class="connect__item address">Bucks</p>
+                  <p class="connect__item address">HP18 9AF</p>
+
+                </div>
+                <div class="col-12 col-md-6 col-lg-8 connect__map__parent">
+                  <div class="connect__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2470.571987307614!2d-0.9385666846820079!3d51.74086350142784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876f26b705da561%3A0x21e49f1bc554e87b!2sThe%20Old%20School%20House%2C%20Church%20Ln%2C%20Towersey%2C%20Thame%20OX9%203QL!5e0!3m2!1sen!2suk!4v1599505141177!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; First Dance <span id="currYear"></span></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+  <script src="js/form.js"></script>
+</body>
