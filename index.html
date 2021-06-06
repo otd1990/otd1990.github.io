@@ -4,6 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <title>First Dance Thame</title>
+  <meta NAME="Description" CONTENT="Ballet classes for children of all ages in Oxfordshire and Buckinghamshire">
+  <meta NAME="Keywords" CONTENT="First Dance Classes Oxfordshire, First Dance Classes Buckinghamshire, First Dance Classes Children">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="First Dance Thame" />
+  <meta property="og:description" content="Ballet classes for children of all ages in Oxfordshire and Buckinghamshire" />
+  <meta property="og:url" content="https://www.firstdanceclasses.co.uk" />
+  <meta property="og:site_name" content="First Dance Thame" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:url" content="https://www.firstdanceclasses.co.uk" />
+  <meta property="og:image" content="https://www.firstdanceclasses.co.uk/images/logo-main.jpg" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +37,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Bootstrap  -->
   <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-  <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css" /> -->
-  <link rel="stylesheet" href="css/styles.compiled.css">
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <script src="https://kit.fontawesome.com/be99808d02.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="css/styles.compiled.css"> -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
 </head>
 
 <body>
   <header class="header">
-    <div class="header__logo">
-      <a href="index.html">
-        <img src="images/logo-main.jpg" alt="First Dance Thame Logo" class="header__logo--img" />
-      </a>
-    </div>
-    <nav class="header__nav">
-      <div class="header__right">
-        <a href="about.html" class="header__nav--item">About</a>
-        <a href="classes.html" class="header__nav--item">Classes</a>
-        <a href="timetable.html" class="header__nav--item">Timetable</a>
-        <a href="contact.html" class="header__nav--item">Contact</a>
-      </div>
-    </nav>
-    <div class="navigation__button">
-      <span class="navigation__icon">&nbsp;</span>
-    </div>
   </header>
   <main>
   <section class="hero">
@@ -60,6 +68,11 @@
           <p class="about__sub--desc">Learn </p>
           <p class="about__sub--desc">Inspire</p>
           <p class="about__sub--desc">Enjoy</p>
+        </div>
+        <div class="row mt-4 mb-5">
+          <div class="col-12">
+            <p class="about__me--text text-center">Providing ballet classes for children of all ages in Oxfordshire and Buckinghamshire. Passionate about teaching in a relaxed yet structured environment, inspiring young minds. </p>
+          </div>
         </div>
         <div class="about__me row">
           <div class="col-12 col-md-7">
@@ -123,15 +136,54 @@
         </div>
       </div>
     </section>
+    <section id="gallery">
+      <div id="gallery-container" class="row">
+
+      </div>
+    </section>
   </main>
   <footer class="footer">
-    <p>&copy; First Dance <span id="currYear"></span></p>
   </footer>
-
+  <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
   <script src="js/scripts.js"></script>
   <script>
   const currYear = new Date().getFullYear();
 
   document.getElementById('currYear').innerHTML = currYear;
+  
+  let cont = "";
+  let content = [];
+  const returnedImages = async () =>{
+    fetch('https://res.cloudinary.com/fdcthame/image/list/show.json').
+    then((res) => res.json()).
+    then((json) => {
+      json.resources.map((resource) => {
+        content = [...content, resource];
+        // console.log(public_id , format);
+        // cont += '<div class="col-12 col-md-6 col-lg-6">\
+        //   <div class="gallery__wrap"><img class="gallery__img" src="https://res.cloudinary.com/fdcthame/image/upload/v'+version+'/'+public_id+'.'+format+'" alt="'+public_id+'" />\
+        //     </div></div>';
+
+      });
+      fetch('https://res.cloudinary.com/fdcthame/video/list/show.json').then((res) => res.json()).then((json) => {
+        json.resources.map((resource) => { content = [...content, resource] });
+      }).then(() => {
+        content.map(({public_id, format, version}) => {
+          const t = public_id.substring(0, 3);
+          cont += '<div class="col-12 col-md-6 col-lg-4 mb-3"><div class="gallery__wrap" style="width: 100%; padding-bottom: 100%; position: relative;">';
+          if(t === 'VID'){
+            cont += '<iframe style="height: 100%; width: 100%; position: absolute;" id="hero-video" class="embed-responsive-item" src="https://res.cloudinary.com/fdcthame/video/upload/v'+version+'/'+public_id+'.'+format+'" allowfullscreen="" allow="autoplay;fullscreen" ></iframe>';
+          }else{
+            cont += '<img style="height: 100%; width: 100%; position: absolute;" class="gallery__img" src="https://res.cloudinary.com/fdcthame/image/upload/v'+version+'/'+public_id+'.'+format+'" alt="'+public_id+'" />';
+          }
+        cont += '</div></div>';
+        });
+        document.getElementById('gallery-container').innerHTML = cont;
+      });
+    });
+  }
+
+  returnedImages();
+
   </script>
 </body>
