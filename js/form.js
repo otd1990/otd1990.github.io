@@ -30,6 +30,7 @@
       form.reset();
       button.style = "display: none ";
       status.innerHTML = "Thanks! your request has been submitted, I will be in touch as soon as possible";
+      status.style = "display: block;"
     }
 
     function error() {
