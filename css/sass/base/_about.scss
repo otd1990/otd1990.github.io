@@ -1,0 +1,65 @@
+// .pageAbout{
+//   &__image.hero--about{
+//     background-image: url('../images/class-2.jpg');
+//   }
+// }
+
+.box__grey {
+  color: #fff;
+  background-color: $color-dark;
+  margin-top: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--title {
+    margin-bottom: 0;
+    font-size: 5rem;
+    line-height: 3;
+    margin-top: 2rem;
+  }
+}
+
+.classes {
+  padding: 2rem 4rem;
+  background-color: $color-secondary;
+  margin: 1.5rem 0;
+
+  &__text {
+    font-size: 1.6rem;
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
+  }
+
+  &__offered {
+    &--header {
+      font-weight: 700;
+      margin: 1rem 0;
+      font-size: 2.8rem;
+    }
+
+    &--list {
+      list-style: none;
+      font-size: 1.6rem;
+      &--item{
+        @include respond(tab-port){
+          font-size: 2rem;
+          p{
+            font-size: 2rem;
+          }
+        }
+        span{
+          display: block;
+          &:not(:last-child){
+            margin-bottom: .8rem;
+          }
+        }
+      }
+    }
+  }
+  &__images{
+    height: 100%;
+    @include flex-center;
+  }
+}

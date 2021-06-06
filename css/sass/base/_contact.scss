@@ -1,0 +1,171 @@
+.connect {
+  @include section;
+   &__heading {
+    font-family: $font-1;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
+  }
+
+&__text{
+  font-size: 1.8rem;
+  margin: 2rem 0;
+  @include respond(tab-port){
+    font-size: 2rem;
+  }
+  p{
+    font-size: inherit;
+  }
+}
+
+  &__item {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
+  }
+
+  &__item.address {
+    margin-bottom: 0.5rem;
+  }
+
+  &__form {
+    &--container {
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition-delay: 0.3s;
+    }
+
+    &--box {
+      padding: 0 2rem 2rem;
+      background-color: #fff;
+      margin-bottom: 3rem;
+      @include respond(phone-lg){
+        padding-top: 2.5rem;
+      }
+    }
+
+    &--sub {
+      font-size: 1.6rem;
+      color: $color-main;
+      text-align: center;
+      transform: translateX(100px);
+      margin: 1.8rem 0 -.5rem;
+      opacity: 0;
+      @include respond(tab-port) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--floating-container {
+      position: relative;
+      /*  make label relate to div  */
+      padding-top: 3rem;
+      /*  make space for label      */
+    }
+
+    &--text {
+      font-size: 1.5rem;
+      background: $color-secondary;
+      outline: none;
+      color: #2c3540;
+      border-color: transparent;
+      width: 100%;
+      padding: 0.6rem 1rem;
+      font-weight: 700;
+
+      &:focus {
+        border-bottom: 0.3rem solid $color-main;
+      }
+    }
+
+    &--blocking {
+      width: 100%;
+    }
+
+    &--floating-label {
+      position: absolute;
+      pointer-events: none;
+      left: 1rem;
+      top: 3.75rem;
+      transition: 0.2s ease all;
+      color: #2c3540;
+      font-size: 1.4rem;
+      font-weight: 700;
+      @include respond(tab-port) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &--label {
+      width: 100%;
+      padding-top: 2rem;
+    }
+
+    &--info{
+      height: 100%;
+@include flex-center;
+flex-direction: column;
+// @include respond(phone-lg){
+//   padding-top: 2.5rem;
+// }
+    }
+  }
+
+  &__map {
+    &__parent {
+      padding-left: 0 !important;
+      @include respond(phone-lg){
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+      }
+    }
+    overflow: hidden;
+    padding-bottom: 58.25%;
+    position: relative;
+    height: 0;
+    left: 0;
+    bottom: -1rem;
+
+    iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #2c3540;
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
+}
+
+.input-filled {
+  border-bottom: 0.3rem solid $color-main;
+}
+
+.connect__form--text.input-filled ~ .connect__form--floating-label,
+.connect__form--text:focus ~ .connect__form--floating-label {
+  top: 0.6rem;
+}
+
+#my-form-status {
+  color: $color-dark;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 2rem;
+  display: none;
+  @include respond(tab-port){
+    font-size: 2rem;
+  }
+}
