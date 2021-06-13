@@ -38,8 +38,8 @@
   <!-- Bootstrap  -->
   <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/be99808d02.js" crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" href="css/styles.compiled.css"> -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.compiled.css">
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
 </head>
 
@@ -136,11 +136,6 @@
         </div>
       </div>
     </section>
-    <section id="gallery">
-      <div id="gallery-container" class="row">
-
-      </div>
-    </section>
   </main>
   <footer class="footer">
   </footer>
@@ -150,40 +145,5 @@
   const currYear = new Date().getFullYear();
 
   document.getElementById('currYear').innerHTML = currYear;
-  
-  let cont = "";
-  let content = [];
-  const returnedImages = async () =>{
-    fetch('https://res.cloudinary.com/fdcthame/image/list/show.json').
-    then((res) => res.json()).
-    then((json) => {
-      json.resources.map((resource) => {
-        content = [...content, resource];
-        // console.log(public_id , format);
-        // cont += '<div class="col-12 col-md-6 col-lg-6">\
-        //   <div class="gallery__wrap"><img class="gallery__img" src="https://res.cloudinary.com/fdcthame/image/upload/v'+version+'/'+public_id+'.'+format+'" alt="'+public_id+'" />\
-        //     </div></div>';
-
-      });
-      fetch('https://res.cloudinary.com/fdcthame/video/list/show.json').then((res) => res.json()).then((json) => {
-        json.resources.map((resource) => { content = [...content, resource] });
-      }).then(() => {
-        content.map(({public_id, format, version}) => {
-          const t = public_id.substring(0, 3);
-          cont += '<div class="col-12 col-md-6 col-lg-4 mb-3"><div class="gallery__wrap" style="width: 100%; padding-bottom: 100%; position: relative;">';
-          if(t === 'VID'){
-            cont += '<iframe style="height: 100%; width: 100%; position: absolute;" id="hero-video" class="embed-responsive-item" src="https://res.cloudinary.com/fdcthame/video/upload/v'+version+'/'+public_id+'.'+format+'" allowfullscreen="" allow="autoplay;fullscreen" ></iframe>';
-          }else{
-            cont += '<img style="height: 100%; width: 100%; position: absolute;" class="gallery__img" src="https://res.cloudinary.com/fdcthame/image/upload/v'+version+'/'+public_id+'.'+format+'" alt="'+public_id+'" />';
-          }
-        cont += '</div></div>';
-        });
-        document.getElementById('gallery-container').innerHTML = cont;
-      });
-    });
-  }
-
-  returnedImages();
-
   </script>
 </body>
