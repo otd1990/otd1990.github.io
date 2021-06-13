@@ -28,6 +28,7 @@
     header += '<div class="header__right">';
     header += '<a href="about.html" class="header__nav--item">About</a>';
     header += '<a href="classes.html" class="header__nav--item">Classes</a>';
+    header += '<a href="gallery.html" class="header__nav--item">Gallery</a>';
     header += '<a href="timetable.html" class="header__nav--item">Timetable</a>';
     header += '<a href="location.html" class="header__nav--item">Location</a>';
     header += '<a href="contact.html" class="header__nav--item">Contact</a>';
